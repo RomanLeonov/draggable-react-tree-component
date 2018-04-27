@@ -1,7 +1,7 @@
 /* eslint no-underscore-dangle: "off" */
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
-import React from 'react';
+import React from 'react'
 import classNames from 'classnames'
 import {
   loopAllChildren,
@@ -210,10 +210,8 @@ class Tree extends React.Component {
     })
 
     if (this.dragNodesKeys.indexOf(key) > -1) {
-      if (console.warn) {
-        console.warn('Cannot drop node on one of it\'s children')
-      }
-      return false
+      this.props.onDrop(null)
+      return undefined
     }
 
     const posArr = treeNode.props.pos.split('-')
