@@ -60,7 +60,7 @@ const App = () => {
 
       return (<div className="container">
 
-          {result}
+        {result}
 
       </div>)
     }
