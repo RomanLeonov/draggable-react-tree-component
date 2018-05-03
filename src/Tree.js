@@ -740,7 +740,7 @@ class Tree extends React.Component {
 
     /* eslint-disable */
     return (
-      <ul {...domProps} unselectable ref="tree">
+      <ul {...domProps} ref="tree">
         {React.Children.map(props.children, this.renderTreeNode, this)}
       </ul>
     )
