@@ -82,15 +82,17 @@ class Tree extends React.Component {
 
     this.cacheExpandedKeys()
 
-    // collapse the currently dragged node
-    const expandedKeys = this.updateExpandedKeys(treeNode, { expand: false })
+    if (treeNode.props.collapse) {
+      // collapse the currently dragged node
+      const expandedKeys = this.updateExpandedKeys(treeNode, { expand: false })
 
-    if (expandedKeys) {
-      // Controlled expand, save and then reset
-      st.expandedKeys = expandedKeys
+      if (expandedKeys) {
+        // Controlled expand, save and then reset
+        st.expandedKeys = expandedKeys
+      }
+
+      this.setState(st)
     }
-
-    this.setState(st)
 
     this.props.onDragStart({
       event: e,

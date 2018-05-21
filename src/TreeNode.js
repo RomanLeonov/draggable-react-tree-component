@@ -508,6 +508,7 @@ TreeNode.propTypes = {
   disableCheckbox: PropTypes.bool,
   expanded: PropTypes.bool,
   isLeaf: PropTypes.bool,
+  collapse: PropTypes.bool,
   root: PropTypes.object,
   onSelect: PropTypes.func,
   items: PropTypes.node,
@@ -518,7 +519,8 @@ TreeNode.propTypes = {
 TreeNode.defaultProps = {
   title: defaultTitle,
   padding: 18,
-  basePadding: 0
+  basePadding: 0,
+  collapse: true
 }
 
 export default TreeNode
