@@ -472,11 +472,10 @@ class TreeNode extends React.Component {
     const depth = props.pos ? (props.pos.split('-').length - 1) : 0
 
     return (
-      <li {...liProps} ref={(ref) => (this.li = ref)}>
+      <li {...liProps} ref={(ref) => (this.li = ref)} tabIndex="0">
 
         <div
           ref={(ref) => (this.selectHandle = ref)}
-          tabIndex="0"
           className={classNames(
             `${prefixCls}-item-label `,
             {
