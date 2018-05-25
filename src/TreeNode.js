@@ -476,6 +476,7 @@ class TreeNode extends React.Component {
 
         <div
           ref={(ref) => (this.selectHandle = ref)}
+          tabIndex="0"
           className={classNames(
             `${prefixCls}-item-label `,
             {
